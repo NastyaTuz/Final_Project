@@ -1,0 +1,27 @@
+.discount_banner {
+  margin: 80px auto;
+  padding: 32px;
+  position: relative;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(261deg, #0b710b 32.63%, #393 98.96%);
+}
+
+.discount_banner h2 {
+  text-align: center;
+  color: white;
+  margin-top: 32px;
+  padding: 32px 0 24px 0;
+}
+
+.discount_banner img {
+  position: absolute;
+  bottom: 0;
+  left: 32px;
+}
+
+.discount_banner div {
+  margin-top: 56px;
+  display: flex;
+  justify-content: flex-end;
+}

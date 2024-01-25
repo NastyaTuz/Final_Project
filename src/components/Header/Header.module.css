@@ -1,0 +1,24 @@
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_container nav {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  list-style: none;
+}
+.header_container nav > p, img {
+  cursor: pointer;
+}
+
+.link{
+  text-decoration: none;
+  color: inherit; 
+}
+
+.link:hover{
+  color: #339933;
+}

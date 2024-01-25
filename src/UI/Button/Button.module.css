@@ -1,0 +1,32 @@
+.button_action {
+  height: 58px;
+  padding: 16px 32px;
+  gap: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  color: #fff;
+  border: none;
+  color: var(--txt-white, #fff);
+
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.green {
+  background-color: #339933;
+}
+
+.white {
+  background-color: #fff;
+}
+
+.dark {
+  color: #282828;
+}
+
+.button_action:hover {
+  background-color: #282828;
+}

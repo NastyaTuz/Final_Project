@@ -1,0 +1,14 @@
+.category_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.category_card img {
+  max-width: 100%;
+  height: 350px;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 12px;
+}
