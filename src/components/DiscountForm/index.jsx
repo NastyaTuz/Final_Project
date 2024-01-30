@@ -35,8 +35,8 @@ export default function DiscountForm() {
         {...register("phone", {
           required: "required field",
           maxLength: {
-            value: 12,
-            message: "Phone number should contain 12 numbers",
+            value: 14,
+            message: "Phone number should contain 14 numbers",
           },
         })}
       />

@@ -14,11 +14,3 @@
   cursor: pointer;
 }
 
-.link{
-  text-decoration: none;
-  color: inherit; 
-}
-
-.link:hover{
-  color: #339933;
-}

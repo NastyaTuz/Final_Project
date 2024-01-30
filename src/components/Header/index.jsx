@@ -5,20 +5,22 @@ import { Link } from 'react-router-dom'
 
 export default function Header() {
 
- 
-
   return (
     <div className={[s.header_container, 'wrapper'].join(' ')}>
          <img src={logo} alt="logo" />
          <nav> 
-          <Link to={'/'} className={s.link}>
+          <Link to={'/'} className='link'>
             <p>Main Page</p>
           </Link>
-          <Link to={'/categories'} className={s.link}>
+          <Link  to={'/categories'} className='link'>
             <p>Categories</p>
           </Link>
+          <Link to={'/products/all'} className='link'>
             <p>All products</p>
+          </Link>
+          <Link to={'/products/sales'} className='link'>
             <p>All sales</p>
+          </Link>
          </nav>
          <img src={cart} alt="cart" />
       

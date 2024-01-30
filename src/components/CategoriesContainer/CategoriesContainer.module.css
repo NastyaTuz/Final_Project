@@ -1,6 +1,4 @@
-.categories_container{
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-
+.categories_container {
+  display: flex;
+  gap: 32px;
 }

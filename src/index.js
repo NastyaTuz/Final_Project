@@ -5,7 +5,7 @@ import { HashRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./store";
 
-export const ROOT_URL = 'http://localhost:3333/'
+export const ROOT_URL = 'http://localhost:3333'
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

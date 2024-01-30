@@ -17,7 +17,9 @@ export const productsReducer = (state = defaultState, action) => {
         products: action.payload.data,
       };
     case SALE_PRODUCTS:
-        
+      let sales_products = action.payload.filter((el) => el.discont_price);
+      return { category_title: "Discounted items", products: sales_products };
+
     default:
       return state;
   }
@@ -26,5 +28,9 @@ export const productsReducer = (state = defaultState, action) => {
 export const allProductsAction = (payload) => ({ type: ALL_PRODUCTS, payload });
 export const categoryProductsAction = (payload) => ({
   type: CATEGORY_PRODUCTS,
-  payload,
+  payload
+});
+export const salesProductsAction = (payload) => ({
+  type: SALE_PRODUCTS,
+  payload
 });

@@ -1,5 +1,5 @@
 import { ROOT_URL } from ".."
-import { allProductsAction, categoryProductsAction } from "../store/Reducers/productsReducer"
+import { allProductsAction, categoryProductsAction, salesProductsAction } from "../store/Reducers/productsReducer"
 
 export function fetchAllProducts(type){
     return function(dispatch){
@@ -9,7 +9,7 @@ export function fetchAllProducts(type){
             if(type === 'all'){
                 dispatch(allProductsAction(data))
             }else if(type === 'sale'){
-                dispatch()
+                dispatch(salesProductsAction(data))
             }
         })
     }

@@ -1,0 +1,25 @@
+.navigation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-top: 80px;
+  justify-content: flex-end;
+}
+
+.navigation hr {
+  width: 85%;
+  color: #ddd;
+}
+.navigation span {
+  padding: 8px 16px;
+  color: #8b8b8b;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 126%;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}

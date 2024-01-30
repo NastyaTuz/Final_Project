@@ -15,7 +15,8 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/categories" element={<CategoriesPage />} />
         <Route path="/products/all" element={<ProductsPage  type='all'/>} />
-        <Route path="/products/:id" element={<ProductsPage type='category' />} />
+        <Route path="/products/sales" element={<ProductsPage type='sale'/>} />
+        <Route path="/category/:id" element={<ProductsPage type='category' />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
 
