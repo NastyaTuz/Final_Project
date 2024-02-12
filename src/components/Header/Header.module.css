@@ -10,7 +10,32 @@
   gap: 32px;
   list-style: none;
 }
-.header_container nav > p, img {
+
+nav p:hover {
+  color: #339933;
+}
+
+.header_container nav > p,
+img {
   cursor: pointer;
 }
 
+.header_container div {
+  position: relative;
+}
+
+.cart_counter {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  border-radius: 50px;
+  background-color: #339933;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 90%;
+  padding: 7px;
+}

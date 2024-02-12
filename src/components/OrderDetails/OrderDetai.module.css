@@ -1,0 +1,40 @@
+.order_detail {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f3f4;
+  border-radius: 12px;
+  padding: 32px;
+  gap: 18px;
+}
+
+.order_detail > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 32px;
+}
+
+.order_detail ::placeholder {
+  color: #8b8b8b;
+}
+
+
+h4{
+color:  #8B8B8B;
+font-family: Montserrat;
+font-size: 40px;
+font-weight: 500;
+line-height: 130%; 
+}
+
+.order_detail > h3{
+padding-bottom: 24px;
+}
+
+.order_detail form input{
+    color: black;
+}
+.order_detail form{
+  width: 100%;
+}

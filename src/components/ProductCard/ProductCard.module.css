@@ -14,17 +14,15 @@
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
 }
-.product_card h3,
-p {
-  padding: 0 32px;
-}
+
 .product_card p{
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
     max-width: 335px;
-
+    padding: 0 32px;
 }
+
 .product_card span {
   position: absolute;
   top: 20px;
@@ -38,7 +36,7 @@ p {
   border-radius: 6px;
   padding: 4px 8px;
 }
-.product_card div {
+.product_card .button_cart {
   position: absolute;
   top: 210px;
   right: 32px;
@@ -47,6 +45,21 @@ p {
   transition: 0.2s;
 }
 
-.product_card:hover div {
+.product_card:hover .button_cart{
   opacity: 1;
+}
+
+.product_card .price_discont{
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  padding: 0 32px;
+  gap: 16px;
+}
+
+.product_card .price_discont p{
+  text-decoration: line-through;
+  color: #8B8B8B;
+  padding: 0;
+
 }

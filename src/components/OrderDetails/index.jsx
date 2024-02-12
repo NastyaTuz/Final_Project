@@ -1,11 +1,18 @@
-import Button from "../../UI/Button/Button";
-import Input from "../../UI/Input/Input";
-import { fetchPostSale } from "../../asyncActions/postOrder";
-import s from "./DiscountForm.module.css";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchPostOrder } from "../../asyncActions/postOrder";
+import { OrderModalAction } from "../../store/Reducers/modalWindowReducer";
 import { useForm } from "react-hook-form";
+import Input from "../../UI/Input/Input";
+import Button from "../../UI/Button/Button";
+import s from '../DiscountForm/DiscountForm.module.css'
+import style from './OrderDetai.module.css'
+import ModalWindow from "../ModalWindow";
 
+export default function OrderDetails() {
+  const {countItems, totalPrice } = useSelector((store) => store.cart);
+  const dispatch = useDispatch()
 
-export default function DiscountForm() {
   let {
     register,
     handleSubmit,
@@ -13,17 +20,23 @@ export default function DiscountForm() {
     reset,
   } = useForm();
 
-  let onSubmit = (data) => {
+  const form_submit = (data) => {
     console.log(data);
-    fetchPostSale(data)
+    fetchPostOrder(data);
+    dispatch(OrderModalAction(true));
     reset();
   };
 
-
   return (
-    <form className={s.form_container} onSubmit={handleSubmit(onSubmit)}>
-      <Input
-      style={{backgroundColor: 'transparent'}}
+    <div className={style.order_detail}>
+      <h3>Order details</h3>
+      <h4>{countItems} items</h4>
+      <div>
+        <h4>Total</h4>
+        <h2 style={{margin: 0}}>${totalPrice}</h2>
+      </div>
+      <form className={s.form_container}onSubmit={handleSubmit(form_submit)}>
+      <Input 
         placeholder="Name"
         type="text"
         id="name"
@@ -34,7 +47,6 @@ export default function DiscountForm() {
       )}
 
       <Input
-        style={{backgroundColor: 'transparent'}}
         placeholder="Phone"
         type="tel"
         id="phone"
@@ -51,7 +63,6 @@ export default function DiscountForm() {
       )}
 
       <Input
-        style={{backgroundColor: 'transparent'}}
         placeholder="Email"
         type="email"
         id="email"
@@ -69,11 +80,13 @@ export default function DiscountForm() {
       )}
 
       <Button
-        color={"dark"}
+        color={"green"}
         width={"100%"}
-        text={"Get a discount"}
+        text={"Order"}
         type={"submit"}
       />
-    </form>
+      </form>
+      <ModalWindow/>
+    </div>
   );
 }

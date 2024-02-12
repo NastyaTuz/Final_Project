@@ -1,0 +1,18 @@
+.bread_crumbs {
+  display: flex;
+  gap: 16px;
+}
+
+
+.crumb {
+  color: #8b8b8b;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 126%;
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  list-style: none;
+}

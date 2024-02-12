@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { fetchCategoriesList } from "../../asyncActions/categories";
 import CategoryCard from "../CategoryCard";
 import Navigation from "../../UI/Navigation/Navigation";
+import BreadCrumbs from "../../UI/BreadCrumbs/BreadCrumbs";
 
 export default function CategoriesContainer({
   applySlice = false,
@@ -20,7 +21,7 @@ export default function CategoriesContainer({
     <div className="wrapper">
       <div className="navigation_container">
         <h2>Categories</h2>
-        {applyNavigation ? <Navigation title={"All categories"} /> : ""}
+        {applyNavigation ? <Navigation title={"All categories"} link={'/categories'} /> : ""}
       </div>
       <div className={s.categories_container}>
         {applySlice

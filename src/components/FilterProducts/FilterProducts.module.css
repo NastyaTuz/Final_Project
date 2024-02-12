@@ -1,0 +1,58 @@
+.filter{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.filter form input{
+padding: 8px 16px;
+width: 112px;
+color: #8B8B8B;
+font-family: Montserrat;
+font-size: 16px;
+font-weight: 500;
+line-height: 126%; 
+}
+
+.filter label{
+color: #282828;
+font-family: Montserrat;
+font-size: 20px;
+font-weight: 600;
+line-height: 130%;
+}
+
+.checkbox_container{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.checkbox_container input{
+    display: none;
+}
+
+.checkmark{
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  position: relative;
+}
+
+.checkmark::before {
+  content: none;
+  display: block;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transition: 0.2s;
+  background-color: #339933;
+  opacity: 0;
+}
+
+.checkbox_container > input:checked + .checkmark::before {
+    opacity: 1;
+}
+

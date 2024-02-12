@@ -6,8 +6,13 @@ import MainPage from "./pages/MainPage";
 import CategoriesPage from "./pages/CategoriesPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ProductsPage from "./pages/ProductsPage";
+import ProductInfoPage from "./pages/ProductInfoPage";
+import CartPage from "./pages/CartPage";
+
+
 
 function App() {
+
   return (
     <div>
       <Header />
@@ -17,9 +22,10 @@ function App() {
         <Route path="/products/all" element={<ProductsPage  type='all'/>} />
         <Route path="/products/sales" element={<ProductsPage type='sale'/>} />
         <Route path="/category/:id" element={<ProductsPage type='category' />} />
+        <Route path="/products/:id" element={<ProductInfoPage/>} />
+        <Route path="/cart" element={<CartPage/>} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-
       <Footer />
     </div>
   );

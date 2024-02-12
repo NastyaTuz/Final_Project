@@ -11,7 +11,6 @@ body {
   color: #282828;
   background-color: #fff;
   font-family: Montserrat;
-  line-height: 110%;
 }
 
 .wrapper {
@@ -30,12 +29,11 @@ h1 {
 
 h2 {
   color: #282828;
-  font-family: Montserrat;
   font-size: 64px;
   font-weight: 700;
   line-height: 110%;
   margin-bottom: 40px;
-  margin-top: 80px;
+
 }
 
 h3 {
@@ -76,13 +74,11 @@ p {
   color: inherit; 
 }
 
-.link:hover{
-  color: #339933;
-}
 
 /* Navigation */
 
 .navigation_container{
+  margin-top: 80px;
   display: flex;
   align-items: center; 
   justify-content: space-between;

@@ -5,7 +5,6 @@ import notFound from './media/images/404.png'
 
 export default function NotFoundPage() {
     
-    // const navigate = useNavigate()
 
   return (
     <div className='not_found_page'>

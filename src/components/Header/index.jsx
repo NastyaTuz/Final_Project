@@ -2,12 +2,17 @@ import logo from './icons/logo.svg'
 import cart from './icons/cart.svg'
 import s from './Header.module.css'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 export default function Header() {
 
+  const {countItems} = useSelector(store => store.cart)
+
   return (
-    <div className={[s.header_container, 'wrapper'].join(' ')}>
+    <header className={[s.header_container, 'wrapper'].join(' ')}>
+      <Link to={'/'} className='link'>
          <img src={logo} alt="logo" />
+      </Link>
          <nav> 
           <Link to={'/'} className='link'>
             <p>Main Page</p>
@@ -22,8 +27,13 @@ export default function Header() {
             <p>All sales</p>
           </Link>
          </nav>
+         <Link to={'/cart'} className='link'>
+          <div>
+          {countItems > 0 && <span className={s.cart_counter}>{countItems}</span>}
          <img src={cart} alt="cart" />
+          </div>
+         </Link>
       
-    </div>
+    </header>
   )
 }

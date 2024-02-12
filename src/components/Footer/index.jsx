@@ -9,7 +9,7 @@ export default function Footer() {
 
   return (
     <div className="wrapper">
-      <h2>Contact</h2>
+      <h2 style={{marginTop:'80px'}}>Contact</h2>
       <div className={s.footer_container}>
         <div>
           <span>phone</span>
@@ -36,9 +36,7 @@ export default function Footer() {
         <iframe
           width="100%"
           height="350"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0"
+          frameBorder='none'
           src="https://maps.google.com/maps?width=100%25&amp;height=350&amp;hl=en&amp;q=Starta%20Institute%20by%20Tel-Ran%20Linkstra%C3%9Fe%202/8%20Etage,%2010785%20Berlin+(Starta%20Institute%20by%20Tel-Ran)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
         >
           <a href="https://www.maps.ie/population/">
