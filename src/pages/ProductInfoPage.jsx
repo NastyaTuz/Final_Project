@@ -1,13 +1,9 @@
-import React from 'react'
-import ProductInfo from '../components/ProductInfo'
-import BreadCrumbs from '../UI/BreadCrumbs/BreadCrumbs'
+import ProductInfo from "../components/ProductInfo";
 
 export default function ProductInfoPage() {
-
   return (
     <div>
-      <BreadCrumbs/>
       <ProductInfo />
     </div>
-  )
+  );
 }

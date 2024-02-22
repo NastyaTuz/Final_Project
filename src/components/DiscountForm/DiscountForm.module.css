@@ -27,3 +27,23 @@
 input:focus::placeholder {
   color: transparent;
 }
+
+
+@media(max-width: 1000px){
+  .form_container {
+    width: 410px;
+  }
+}
+@media(max-width: 800px){
+  .form_container {
+    width: 294px;
+  }
+ 
+}
+@media(max-width: 500px){
+  .form_container {
+    width: 100%;
+    z-index: 1;
+  }
+}
+

@@ -1,4 +1,5 @@
 .footer_container {
+  margin-top: 40px;
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 32px;
@@ -7,10 +8,9 @@
 .footer_container > div {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 32px;
   background-color: #f1f3f4;
   border-radius: 12px;
+  padding: 32px;
 }
 
 .footer_container div span {
@@ -20,13 +20,37 @@
   padding-bottom: 16px;
 }
 
-.footer_container div > img {
-    cursor: pointer;
-    padding-right: 16px;
-  }
+.footer_container div img {
+  cursor: pointer;
+  padding-right: 16px;
+}
 
 .map {
   margin: 32px auto;
 }
 
-
+@media (max-width: 1000px) {
+  .footer_container {
+    gap: 20px;
+    grid-template-columns: 2fr 2fr;
+  }
+}
+@media (max-width: 800px) {
+  .footer_container {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+@media (max-width: 500px) {
+  .footer_container {
+    grid-template-columns: 1fr;
+  }
+  .footer_container div h3 {
+    font-size: 28px;
+  }
+  .footer_container > div {
+    padding: 24px 20px;
+  }
+  .footer_container div span {
+    padding-bottom: 12px;
+  }
+}

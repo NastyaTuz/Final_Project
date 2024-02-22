@@ -6,7 +6,10 @@ import { fetchProductInfo } from "../../asyncActions/products";
 import s from "./ProductInfo.module.css";
 import Button from "../../UI/Button/Button";
 import { addItemAction } from "../../store/Reducers/cartReducer";
-import { decrementCounterAction, incrementCounterAction } from "../../store/Reducers/productInfoReducer";
+import {
+  decrementCounterAction,
+  incrementCounterAction,
+} from "../../store/Reducers/productInfoReducer";
 import minus from "./icons/minus.svg";
 import plus from "./icons/plus.svg";
 
@@ -21,17 +24,22 @@ export default function ProductInfo() {
   }, [dispatch]);
 
   const oldPrice = (price, discont_price) => {
-    return Math.round((price / (1 - discont_price / 100)) * 100) / 100;
+    return Math.floor(price / (1 - discont_price / 100));
   };
 
   return (
     <section className="wrapper">
       <div className={s.product_info_container}>
-        <img src={ROOT_URL + product.image} alt={product.title} />
+        <div className={s.image_product}>
+          <img src={ROOT_URL + product.image} alt={product.title} />
+          {product.discont_price && (
+            <span className={s.mobile_active}>-{product.discont_price}%</span>
+          )}
+        </div>
+        <h3 className={s.product_title}>{product.title}</h3>
         <div className={s.product_descr}>
-          <h3>{product.title}</h3>
           <div className={s.price}>
-            <h2 style={{ margin: "0" }}>${product.price}</h2>
+            <h2>${product.price}</h2>
             {product.discont_price && (
               <p>${oldPrice(product.price, product.discont_price)}</p>
             )}
@@ -49,15 +57,14 @@ export default function ProductInfo() {
                 onClick={() => dispatch(incrementCounterAction(1))}
               />
             </div>
-            <div>
-              <Button
-                onClick={() => dispatch(addItemAction(product))}
-                width={"316px"}
-                text={"Add to cart"}
-                color={"green"}
-              />
-            </div>
+            <Button
+              onClick={() => dispatch(addItemAction(product))}
+              text={"Add to cart"}
+              color={"green"}
+            />
           </div>
+        </div>
+        <div className={s.text_descr}>
           <p style={{ fontWeight: "600" }}>Description</p>
           <p>{product.description}</p>
         </div>

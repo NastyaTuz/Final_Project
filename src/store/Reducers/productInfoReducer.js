@@ -7,7 +7,7 @@ const DECREMENT_COUNTER = "DECREMENT_COUNTER";
 export const productInfoReducer = (state = defaultState, action) => {
   switch (action.type) {
     case PRODUCT_INFO:
-      return {...action.payload, count: 1 };
+      return { ...action.payload, count: 1 };
     case INCREMENT_COUNTER:
       return {
         ...state,
@@ -25,7 +25,10 @@ export const productInfoReducer = (state = defaultState, action) => {
   }
 };
 
-export const productInfoAction = (payload) => ({ type: PRODUCT_INFO, payload });
+export const productInfoAction = (payload) => ({
+  type: PRODUCT_INFO,
+  payload,
+});
 export const incrementCounterAction = (payload) => ({
   type: INCREMENT_COUNTER,
   payload,

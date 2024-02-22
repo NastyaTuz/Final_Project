@@ -1,5 +1,29 @@
-.sales_list{
+.sales_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 1000px) {
+  .sales_list {
+    gap: 20px;
+  }
+}
+@media (max-width: 800px) {
+  .sales_list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 32px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .sales_list {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .sales_list {
+    display: flex;
+    flex-direction: column;
+  }
 }

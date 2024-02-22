@@ -5,22 +5,22 @@ import DiscountBanner from "../components/DiscountBanner";
 import SalesContainer from "../components/SalesContainer";
 
 export default function MainPage() {
-
-  const productsRef = useRef(null)
+  
+  const productsRef = useRef(null);
 
   const scrollToProducts = () => {
     if (productsRef.current) {
-      productsRef.current.scrollIntoView({ behavior: 'smooth' });
+      productsRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
     <div>
       <Banner scrollToProducts={scrollToProducts} />
-      <CategoriesContainer applySlice  applyNavigation/>
+      <CategoriesContainer applySlice applyNavigation />
       <DiscountBanner />
-      <div  ref={productsRef}>
-      <SalesContainer type={'sale'}  applySlice/>
+      <div ref={productsRef}>
+        <SalesContainer type={"sale"} applySlice />
       </div>
     </div>
   );

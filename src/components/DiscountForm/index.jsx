@@ -1,4 +1,4 @@
-import Button from "../../UI/Button/Button";
+import DiscountButton from "../../UI/DiscountButton/DiscountButton";
 import Input from "../../UI/Input/Input";
 import { fetchPostSale } from "../../asyncActions/postOrder";
 import s from "./DiscountForm.module.css";
@@ -68,10 +68,7 @@ export default function DiscountForm() {
         <span className={s.error_text}>{errors.email.message}</span>
       )}
 
-      <Button
-        color={"dark"}
-        width={"100%"}
-        text={"Get a discount"}
+      <DiscountButton
         type={"submit"}
       />
     </form>

@@ -6,7 +6,9 @@ export default function DiscountBanner() {
   return (
     <div className={["wrapper", s.discount_banner].join(" ")}>
       <h2>5% off on the first order</h2>
+      <div className={s.banner_img}>
       <img src={discount_image} alt="discount_image" />
+      </div>
       <div>
         <DiscountForm />
       </div>

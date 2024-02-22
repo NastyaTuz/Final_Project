@@ -1,18 +1,24 @@
 import { useDispatch } from "react-redux";
 import s from "./FilterProducts.module.css";
-import { filterBySaleAction } from "../../store/Reducers/productsReducer";
+import {
+  filterByPriceAction,
+  filterBySaleAction,
+  sortProductsAction,
+} from "../../store/Reducers/productsReducer";
 import Input from "../../UI/Input/Input";
 import { useEffect, useRef } from "react";
-import check from "./check.svg";
 
 export default function FilterProducts({ type, id }) {
   const checkBoxRef = useRef();
+  const formRef = useRef();
 
   const dispatch = useDispatch();
   useEffect(() => {
     if (type !== "sale") {
       checkBoxRef.current.checked = false;
     }
+    formRef.current[0].value = "";
+    formRef.current[1].value = "";
   }, [type, id]);
 
   function handleSaleBox(e) {
@@ -22,15 +28,18 @@ export default function FilterProducts({ type, id }) {
   function priceFormHandler(e) {
     let formData = new FormData(e.target.parentElement.parentElement);
     let data = Object.fromEntries(formData);
-    data.from = data.from ? +data.from: 0;
+    data.from = data.from ? +data.from : 0;
     data.to = data.to ? +data.to : Infinity;
-    console.log(data);
-  };
+    dispatch(filterByPriceAction(data));
+  }
 
+  function selectHandler(e) {
+    dispatch(sortProductsAction(e.target.value));
+  }
   return (
     <div className="wrapper">
       <div className={s.filter}>
-        <form onKeyUp={priceFormHandler}>
+        <form ref={formRef} onKeyUp={priceFormHandler}>
           <label>
             Price
             <Input type="number" placeholder="from" name="from" />
@@ -47,9 +56,20 @@ export default function FilterProducts({ type, id }) {
                 onClick={handleSaleBox}
                 type="checkbox"
               />
-              <img className={s.checkmark} src={check} />
+              <span className={s.checkmark}></span>
             </label>
           )}
+        </div>
+
+        <div className={s.sort_container}>
+          <label>Sorted</label>
+          <select onChange={selectHandler} name="Sort" id="dropdown">
+            <option value="default">by default</option>
+            <option value="price_asc">price: low-high</option>
+            <option value="price_desc">price: high-low</option>
+            <option value="title_asc">title: A-Z</option>
+            <option value="title_desc">title: Z-A</option>
+          </select>
         </div>
       </div>
     </div>

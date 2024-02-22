@@ -1,0 +1,27 @@
+.discount_button {
+  height: 58px;
+  padding: 16px 32px;
+  gap: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  color: #282828;
+  background-color: #fff;
+  border: none;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+  width: 100%;
+}
+
+.discount_button:hover {
+  color: #fff;
+  background-color: #282828;
+}
+
+.submitted {
+  background-color: #f1f3f4;
+  color: #339933;
+}

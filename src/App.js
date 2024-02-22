@@ -4,11 +4,10 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import MainPage from "./pages/MainPage";
 import CategoriesPage from "./pages/CategoriesPage";
-import NotFoundPage from "./pages/NotFoundPage";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import ProductsPage from "./pages/ProductsPage";
 import ProductInfoPage from "./pages/ProductInfoPage";
 import CartPage from "./pages/CartPage";
-
 
 
 function App() {

@@ -6,6 +6,7 @@ import {
   salesProductsAction,
 } from "../store/Reducers/productsReducer";
 
+
 export function fetchAllProducts(type) {
   return function (dispatch) {
     fetch(ROOT_URL + "/products/all")
@@ -35,4 +36,3 @@ export function fetchProductInfo(id) {
       .then((data) => dispatch(productInfoAction(data[0])));
   };
 }
-

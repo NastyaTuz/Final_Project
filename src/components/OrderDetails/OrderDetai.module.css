@@ -1,5 +1,5 @@
 .order_detail {
-  width: 500px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   background-color: #f1f3f4;
@@ -9,32 +9,67 @@
 }
 
 .order_detail > div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 32px;
 }
 
 .order_detail ::placeholder {
   color: #8b8b8b;
 }
 
-
-h4{
-color:  #8B8B8B;
-font-family: Montserrat;
-font-size: 40px;
-font-weight: 500;
-line-height: 130%; 
+h4 {
+  color: #8b8b8b;
+  font-family: Montserrat;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 130%;
 }
 
-.order_detail > h3{
-padding-bottom: 24px;
+.order_detail > h3 {
+  padding-bottom: 24px;
 }
 
-.order_detail form input{
-    color: black;
+.order_detail form input {
+  color: black;
 }
-.order_detail form{
+.order_detail form {
   width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .order_detail {
+    width: 430px;
+  }
+}
+@media (max-width: 800px) {
+  .order_detail {
+    width: 100%;
+  }
+  form button {
+    width: 30%;
+  }
+  .order_detail h3 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 500px) {
+  form button {
+    width: 100%;
+  }
+  .order_detail h2 {
+    font-size: 40px;
+  }
+  h4 {
+    font-size: 28px;
+  }
+  .order_detail h3 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 400px) {
+  .order_detail {
+    width: 320px;
+  }
 }

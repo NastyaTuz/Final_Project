@@ -9,12 +9,15 @@ import ProductCard from "../ProductCard";
 import { useParams } from "react-router-dom";
 import { clearDataAction } from "../../store/Reducers/productsReducer";
 import { addItemAction } from "../../store/Reducers/cartReducer";
+import FilterProducts from "../FilterProducts";
 
 export default function ProductsList({ type }) {
   const { id } = useParams();
 
   const { category_title, products } = useSelector((store) => store.products);
-  const filtered_products = products.filter((el) => el.isShow && el.isShowPrice);
+  const filtered_products = products.filter(
+    (el) => el.isShow && el.isShowPrice
+  );
 
   const dispatch = useDispatch();
 
@@ -39,6 +42,7 @@ export default function ProductsList({ type }) {
   return (
     <div className="wrapper">
       <h2>{category_title}</h2>
+      <FilterProducts type={type} id={id} />
       <div className={s.product_list}>
         {filtered_products.map((el) => (
           <ProductCard

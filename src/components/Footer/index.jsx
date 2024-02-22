@@ -1,15 +1,16 @@
 import instagram from "./icons/instagram.svg";
 import whatsapp from "./icons/whatsapp.svg";
 import s from "./Footer.module.css";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const styles_block = {
-    height: "194px",
+    height: "100%",
   };
 
   return (
     <div className="wrapper">
-      <h2 style={{marginTop:'80px'}}>Contact</h2>
+      <h2 style={{ marginTop: "80px" }}>Contact</h2>
       <div className={s.footer_container}>
         <div>
           <span>phone</span>
@@ -18,8 +19,16 @@ export default function Footer() {
         <div>
           <span>socials</span>
           <div>
-            <img src={instagram} alt="instagram_link" />
-            <img src={whatsapp} alt="whatsapp_link" />
+            <Link
+              to={
+                "https://www.instagram.com/startainstitute?igsh=YXd4Y3E5azc0N29y"
+              }
+            >
+              <img src={instagram} alt="instagram_link" />
+            </Link>
+            <Link to={"https://web.whatsapp.com/"}>
+              <img src={whatsapp} alt="whatsapp_link" />
+            </Link>
           </div>
         </div>
         <div style={styles_block}>
@@ -36,7 +45,7 @@ export default function Footer() {
         <iframe
           width="100%"
           height="350"
-          frameBorder='none'
+          frameBorder="none"
           src="https://maps.google.com/maps?width=100%25&amp;height=350&amp;hl=en&amp;q=Starta%20Institute%20by%20Tel-Ran%20Linkstra%C3%9Fe%202/8%20Etage,%2010785%20Berlin+(Starta%20Institute%20by%20Tel-Ran)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
         >
           <a href="https://www.maps.ie/population/">

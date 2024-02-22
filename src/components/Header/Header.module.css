@@ -3,15 +3,30 @@
   justify-content: space-between;
   align-items: center;
 }
+.burger_menu {
+  display: none;
+}
+.cross{
+  display: none;
+}
 
-.header_container nav {
+body{
+  position: relative;
+}
+
+nav ul {
   display: flex;
   justify-content: center;
   gap: 32px;
   list-style: none;
+  color: #282828;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
 }
 
-nav p:hover {
+nav li:hover {
   color: #339933;
 }
 
@@ -20,14 +35,9 @@ img {
   cursor: pointer;
 }
 
-.header_container div {
-  position: relative;
-}
-
 .cart_counter {
   position: absolute;
-  top: 7px;
-  left: 0;
+  top: 10px;
   width: 26px;
   height: 26px;
   text-align: center;
@@ -39,3 +49,40 @@ img {
   line-height: 90%;
   padding: 7px;
 }
+
+@media (max-width: 500px) {
+  nav ul{
+    display: none;
+    z-index: 1;
+    position: absolute;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    padding: 100px 32px;
+    gap: 36px;
+    right: 0;
+    top: 0;
+    width: 60%;
+    height: 100%;
+    background-color: #fff;
+  }
+  
+  .menu_active {
+    display: flex;
+  }
+  .burger_menu {
+    display: block;
+  }
+  .header_container div {
+    display: flex;
+    gap: 20px;
+
+  }
+  .cross{
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+  }
+}
+
