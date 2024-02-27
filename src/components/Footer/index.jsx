@@ -9,7 +9,7 @@ export default function Footer() {
   };
 
   return (
-    <div className="wrapper">
+    <footer className="wrapper">
       <h2 style={{ marginTop: "80px" }}>Contact</h2>
       <div className={s.footer_container}>
         <div>
@@ -53,6 +53,6 @@ export default function Footer() {
           </a>
         </iframe>
       </div>
-    </div>
+    </footer>
   );
 }

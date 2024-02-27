@@ -24,7 +24,6 @@ export default function Cart() {
     return Math.floor(price / (1 - discont_price / 100));
   };
 
-
   const handleIncrement = (id) => {
     dispatch(addProductAction({ id }));
   };
@@ -40,7 +39,7 @@ export default function Cart() {
   return (
     <section className="wrapper">
       <Navigation
-        width={"50%"}
+        width={"55%"}
         category={"Shopping cart"}
         title={"Back to the store"}
         link={"/categories"}
@@ -84,21 +83,20 @@ export default function Cart() {
               ))}
             </div>
             <OrderDetails />
-          
           </div>
         ) : (
           <div className={s.empty_cart}>
             <p>Looks like you have no items in your basket currently.</p>
             <Link to="/products/all" className="link">
-              <SimpleButton text={'Continue shopping'}/>
+              <SimpleButton text={"Continue shopping"} />
             </Link>
           </div>
         )}
-          <div className={mobile.mobile_navi}>
-              <Link to={"/products/all"} className="link">
-                <span>Back to the store</span>
-              </Link>
-            </div>
+        <div className={mobile.mobile_navi}>
+          <Link to={"/products/all"} className="link">
+            <span>Back to the store</span>
+          </Link>
+        </div>
       </div>
     </section>
   );

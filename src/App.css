@@ -14,7 +14,8 @@ body {
 }
 
 .wrapper {
-  width: 1440px;
+  max-width: 1440px;
+  width: 1360px;
   margin: 40px auto;
 }
 

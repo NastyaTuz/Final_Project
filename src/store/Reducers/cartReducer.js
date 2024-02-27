@@ -82,19 +82,15 @@ export const cartReducer = (state = defaultState, action) => {
       };
 
     case DELETE_PRODUCT:
-      const deletedProduct = state.items.find(
-        (item) => item.id === action.payload.id
+      const updateItems = state.items.filter(
+        (el) => el.id !== action.payload.id
       );
-      const updatedCountItemsDelete =
-        state.countItems - (deletedProduct ? deletedProduct.count : 0);
 
       return {
         ...state,
-        items: state.items.filter((item) => item.id !== action.payload.id),
-        countItems: Math.max(updatedCountItemsDelete, 0),
-        totalPrice: calculateTotalPrice(
-          state.items.filter((item) => item.id !== action.payload.id)
-        ),
+        items: updateItems,
+        countItems: updateItems.length,
+        totalPrice: calculateTotalPrice(updateItems),
       };
 
     case CLEAR_CART:
