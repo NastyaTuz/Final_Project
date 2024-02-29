@@ -1,20 +1,26 @@
 {
   "files": {
-    "main.css": "/final_project/static/css/main.2a63fb10.css",
-    "main.js": "/final_project/static/js/main.ba3c7eec.js",
-    "static/media/banner.jpg": "/final_project/static/media/banner.c05216813d811cc05a08.jpg",
+    "main.css": "/final_project/static/css/main.f26b9d70.css",
+    "main.js": "/final_project/static/js/main.00c2e9a8.js",
+    "static/media/banner.png": "/final_project/static/media/banner.4a9d8372384598a2e3c8.png",
     "static/media/discount.png": "/final_project/static/media/discount.380c18a809b3385a9d30.png",
     "static/media/404.png": "/final_project/static/media/404.8849725c24b1d772ad6e.png",
     "static/media/logo.svg": "/final_project/static/media/logo.72dd322be6cb6eeeab65a6d12ec3199a.svg",
     "static/media/whatsapp.svg": "/final_project/static/media/whatsapp.976b56539522ecec4d232193ad478f23.svg",
+    "static/media/check.svg": "/final_project/static/media/check.e593fa6921377995dbb6.svg",
     "static/media/cart.svg": "/final_project/static/media/cart.5811eced3fe8014209a8d56d3d27c586.svg",
     "static/media/instagram.svg": "/final_project/static/media/instagram.0535a50a5781079486ef5b060a7b6c86.svg",
+    "static/media/menu.svg": "/final_project/static/media/menu.a0e70eebaaa2654989f2fc48db7c88a1.svg",
+    "static/media/ic x.svg": "/final_project/static/media/ic x.4d836bd4b8427951c69b113046cf5f25.svg",
     "index.html": "/final_project/index.html",
-    "main.2a63fb10.css.map": "/final_project/static/css/main.2a63fb10.css.map",
-    "main.ba3c7eec.js.map": "/final_project/static/js/main.ba3c7eec.js.map"
+    "static/media/cross.svg": "/final_project/static/media/cross.9339a86cd9bf47830420c5ac4e71a0ba.svg",
+    "static/media/plus.svg": "/final_project/static/media/plus.10f92ec21ea90f57ac9b58c959ec22c2.svg",
+    "static/media/minus.svg": "/final_project/static/media/minus.490889845cadc2a58691f36182ba72c1.svg",
+    "main.f26b9d70.css.map": "/final_project/static/css/main.f26b9d70.css.map",
+    "main.00c2e9a8.js.map": "/final_project/static/js/main.00c2e9a8.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a63fb10.css",
-    "static/js/main.ba3c7eec.js"
+    "static/css/main.f26b9d70.css",
+    "static/js/main.00c2e9a8.js"
   ]
 }
